@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/button_background"
+            android:enabled="false"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/settings_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_image_view"
+            android:background="@drawable/default_background"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:enabled="false"
+            android:hint="Имя"/>
+
+        <EditText
+            android:id="@+id/settings_place_of_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_name"
+            android:background="@drawable/default_background"
+            android:enabled="false"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:hint="Место работы"/>
+
+        <EditText
+            android:id="@+id/settings_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_place_of_work"
+            android:background="@drawable/default_background"
+            android:enabled="false"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:hint="Отдел"/>
+
+        <EditText
+            android:id="@+id/settings_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_department"
+            android:background="@drawable/default_background"
+            android:enabled="false"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:hint="Должность"/>
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Подтвердить изменения"
+            android:visibility="invisible"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_post"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorPrimaryLight"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
